@@ -1,0 +1,214 @@
+@import 'button';
+@import 'card';
+@import 'config';
+
+html {
+    @include w-100;
+    @include h-100;
+
+    ::placeholder {
+        color: black;
+    }
+
+    body {
+
+        @include w-100;
+        @include h-100;
+
+        margin: 0;
+        padding: 0;
+
+        font-family: $handwriting;
+
+        @include flex(column, unset, center);
+
+
+        #background-image {
+            z-index: -2;
+
+            position:fixed;
+            padding:0;
+            margin:0;
+        
+            top:0;
+            left:0;
+        
+            @include w-100;
+            @include h-100;
+
+            background-image: url("/assets/images/background-image.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+
+        #box {
+            @include w-100;
+            min-height: 53%;
+
+            margin: 0;
+            padding: 0;
+
+            background-color: rgba(255, 230, 0, 0.698);
+        }
+
+        #box2 {
+            z-index: -1;
+
+            margin: 0;
+            padding: 0;
+
+            @include w-100;
+            min-height: 47%;
+
+            background-color: rgba(255, 115, 0, 0.589);
+        }
+
+        .container {
+            padding: 50px;
+
+            @include flex(row, center, unset);
+
+            position: absolute;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            #extra-space {
+                width: 100px;
+            }
+        }
+
+        #opening-statement {
+
+            @include flex(column, center, unset);
+
+            h1 {
+                line-height: 70px;
+                margin: 0px;
+                font-size: 60px;
+            }
+
+            sup {
+                font-size: 20px;
+            }
+
+            p {
+                margin: 0px;
+                padding: 0;
+                font-size: 25px;
+                line-height: 35px;
+            }
+        }
+
+        .card {
+
+            @include flex(column, center, center);
+            h1 {
+                line-height: 40px;
+            }
+
+            form {
+                @include flex(column, space-evenly, center);
+                height: 45%;
+
+                label {
+                    margin: 2px;
+                }
+
+                input {
+                    background-color: unset;
+                    box-shadow: inset -1px 2px 3px rgba(0, 0, 0, 0.383);
+                    border: 1px solid black;
+                    border-radius: 8px;
+                    padding: 5px;
+                }
+            }
+        }
+
+        .card {
+            transform-origin: center;
+            transition: box-shadow 0.15s ease-in-out;
+
+            &:hover {
+                // transform: rotate(3deg) translateX(0%);
+                box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.445);;
+            }
+        }
+    }
+
+    @media only screen and ( max-width: 1104px ) {
+
+        body {
+            #box {
+                min-height: 51%;
+            }
+    
+            #box2 {
+                min-height: 49%;
+            }
+        }
+    }
+
+    @media only screen and ( max-width: 900px ) {
+        body {
+            .container {
+                position: relative;
+                top: 50%;
+    
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+    
+                #extra-space {
+                    @include w-0;
+                    height: 25px;
+                }
+    
+                br {
+                    display: none;
+                }
+
+                .card {
+                    min-width: 275px;
+                    min-height: 275px;
+                }
+            }
+        }
+    }
+
+
+    @media only screen and ( max-width: 430px ) {
+        body {
+
+            #box {
+                background-color: rgba(255, 230, 0, 0.575);
+            }
+
+            .container {
+
+                #opening-statement {
+                    br {
+                        display: none;
+                    }
+
+                    h1 {
+                        font-size: 50px;
+                    }
+
+                    p {
+                        font-size: 25px;
+                    }
+                }
+
+                .card {
+                    min-width: 75%;
+                    min-height: 75vw;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,192 @@
+button {
+  background-color: rgba(255, 115, 0, 0.705);
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 25px;
+  border: 2px solid black;
+  transition: 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: rgba(255, 115, 0, 0.883);
+}
+
+.card {
+  font-family: "Gloria Hallelujah", cursive;
+  min-width: 350px;
+  max-width: 400px;
+  min-height: 350px;
+  background: linear-gradient(-45deg, #ffd82a, #ffe15b);
+  border-radius: 3px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.383);
+  padding: 15px;
+}
+.card h1 {
+  margin: 0;
+  text-align: center;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+html ::placeholder {
+  color: black;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Gloria Hallelujah", cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: center;
+}
+html body #background-image {
+  z-index: -2;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/background-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+html body #box {
+  width: 100%;
+  min-height: 53%;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 230, 0, 0.698);
+}
+html body #box2 {
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 47%;
+  background-color: rgba(255, 115, 0, 0.589);
+}
+html body .container {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: unset;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+html body .container #extra-space {
+  width: 100px;
+}
+html body #opening-statement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: unset;
+}
+html body #opening-statement h1 {
+  line-height: 70px;
+  margin: 0px;
+  font-size: 60px;
+}
+html body #opening-statement sup {
+  font-size: 20px;
+}
+html body #opening-statement p {
+  margin: 0px;
+  padding: 0;
+  font-size: 25px;
+  line-height: 35px;
+}
+html body .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+html body .card h1 {
+  line-height: 40px;
+}
+html body .card form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 45%;
+}
+html body .card form label {
+  margin: 2px;
+}
+html body .card form input {
+  background-color: unset;
+  box-shadow: inset -1px 2px 3px rgba(0, 0, 0, 0.383);
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 5px;
+}
+html body .card {
+  transform-origin: center;
+  transition: box-shadow 0.15s ease-in-out;
+}
+html body .card:hover {
+  box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.445);
+}
+@media only screen and (max-width: 1104px) {
+  html body #box {
+    min-height: 51%;
+  }
+  html body #box2 {
+    min-height: 49%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  html body .container {
+    position: relative;
+    top: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  html body .container #extra-space {
+    width: 0%;
+    height: 25px;
+  }
+  html body .container br {
+    display: none;
+  }
+  html body .container .card {
+    min-width: 275px;
+    min-height: 275px;
+  }
+}
+@media only screen and (max-width: 430px) {
+  html body #box {
+    background-color: rgba(255, 230, 0, 0.575);
+  }
+  html body .container #opening-statement br {
+    display: none;
+  }
+  html body .container #opening-statement h1 {
+    font-size: 50px;
+  }
+  html body .container #opening-statement p {
+    font-size: 25px;
+  }
+  html body .container .card {
+    min-width: 75%;
+    min-height: 75vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

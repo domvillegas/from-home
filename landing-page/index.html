@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <title>From Home</title>
+</head>
+<body>
+    <div id='background-image'>
+        <div id='box'></div>
+        <div id='box2'></div>
+    </div>
+    <div class='container'>
+        <div id='opening-statement'>
+            <h1>From Home<sup>&#8482;</sup></h1>
+            <br>
+            <p>Get your office needs. Right to your door.</p>
+        </div>
+        <div id='extra-space'></div>
+        <div class='card'>
+            <h1>Get Started</h1>
+            <!-- the label name and input id is redundant because the inputs are nested, but I want to show that I understand forms in both contexts -->
+                <form action="https://formspree.io/f/mlealard" method='POST' name='customer-contact-info'>
+                <label for='name'>
+                    Name:
+                    <input type='name' id='name' name='name' placeholder="Name" required>
+                </label>
+                <label for='email'>
+                    Email:
+                    <input type='email' id='email' name='email' placeholder='Email' required>
+                </label>
+                <button>Submit!</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
